@@ -39,6 +39,11 @@ public class Main {
      */
     public static void moveTo(Person person, Position destination) {
         // TODO
+        Transport transport = new Transport();
+        if (person.getPosition() != transport.getPosition()) person.walk(transport.getPosition());
+        transport.personInCar();
+        transport.setPosition(transport.getNearest(destination));
+        if (person.getPosition() != destination) person.walk(destination);
         assert person.getPosition() == destination;
     }
 }
