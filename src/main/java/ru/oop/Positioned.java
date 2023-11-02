@@ -16,8 +16,8 @@ public interface Positioned {
 
     /**
      * Установить новое местоположение
-     * @param position
-     * @return
+     * @param position нужная позиция
+     * @return перемещение объекта
      */
     Position setPosition(Position position);
 }
