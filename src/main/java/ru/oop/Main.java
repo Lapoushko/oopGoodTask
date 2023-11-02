@@ -16,12 +16,17 @@ package ru.oop;
  * @since 21.10.2020
  */
 public class Main {
-
     /**
      * Переехать из текущего места в заданную точку
      */
     public static void moveTo(Person person, Position destination) {
         // TODO
+        Car car = new Car();
+        Position carPosition = car.getCarPosition();
+        person.walk(carPosition);
+        car.personInCar();
+        carPosition = car.goPosition(destination);
         assert person.getPosition() == destination;
+
     }
 }
