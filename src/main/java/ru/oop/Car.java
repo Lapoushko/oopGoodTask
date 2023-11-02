@@ -24,7 +24,14 @@ public class Car {
     /**
      * Человек садится в машину
      */
-    void personInCar(){
+    void personInCar(Person person){
+        // TODO
+    }
+
+    /**
+     * Человек выходит из машины
+     */
+    void exitFromCar(Person person){
         // TODO
     }
 

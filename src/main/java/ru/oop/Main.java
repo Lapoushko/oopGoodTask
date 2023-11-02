@@ -24,8 +24,9 @@ public class Main {
         Car car = new Car();
         Position carPosition = car.getCarPosition();
         person.walk(carPosition);
-        car.personInCar();
+        car.personInCar(person);
         carPosition = car.goPosition(destination);
+        if (carPosition == destination) car.exitFromCar(person);
         assert person.getPosition() == destination;
 
     }
