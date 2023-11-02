@@ -14,8 +14,8 @@ public class Transport implements Positioned {
 
     /**
      * Узнать ближайшую точку к цели
-     * @param destination
-     * @return
+     * @param destination ближайшая точка
+     * @return позиция
      */
     public Position getNearest(Position destination){
         // TODO
@@ -24,7 +24,7 @@ public class Transport implements Positioned {
 
     /**
      * Получить позицию транспорта
-     * @return
+     * @return текущая позиция
      */
     @Override
     public Position getPosition() {
@@ -34,7 +34,7 @@ public class Transport implements Positioned {
 
     /**
      * Отправиться к конечной точке
-     * @param destination
+     * @param destination конечная точка
      */
     @Override
     public Position setPosition(Position destination) {
