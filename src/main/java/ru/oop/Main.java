@@ -41,9 +41,11 @@ public class Main {
         // TODO
         Transport transport = new Transport();
         if (person.getPosition() != transport.getPosition()) person.walk(transport.getPosition());
-        transport.personInCar();
+        transport.personInCar(person);
         transport.setPosition(transport.getNearest(destination));
-        if (person.getPosition() != destination) person.walk(destination);
+        if (person.getPosition() != destination){
+            transport.exitFromCar(person);
+            person.walk(destination); }
         assert person.getPosition() == destination;
     }
 }

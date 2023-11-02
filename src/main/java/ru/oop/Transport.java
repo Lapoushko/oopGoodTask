@@ -8,7 +8,15 @@ public class Transport implements Positioned {
     /**
      * Посаадить человека в машину
      */
-    public void personInCar(){
+    public void personInCar(Person person){
+        // TODO
+    }
+
+    /**
+     * Человек выходит из машины
+     */
+
+    public void exitFromCar(Person person){
         // TODO
     }
 
