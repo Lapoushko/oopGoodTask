@@ -40,15 +40,12 @@ public class Main {
      * Переехать из текущего места в заданную точку
      * на любом, заранее определённом транспорте
      */
-    public static void moveTo(Person person, Position destination) {
-        // TODO
-        List<Transport> transportList = Arrays.asList(new Car(person), new Bus("43", person), new Bus("50", person));
-        for (Transport transport : transportList) {
-            if(person.getPosition() != transport.getPosition()) person.walk(transport.getPosition());
-            transport.personInTransport(person);
-            if(person.getPosition() == transport.getNearest(destination)) transport.exitFromTransport(person);
+    public static void moveTo(Person person, Position destination, List<Transport> transports) {
+        for (Transport transport : transports){
+            person.walk(transport.getPosition());
+            Position position = transport.goPosition(destination);
         }
-
+        person.walk(destination);
         assert person.getPosition() == destination;
     }
 }
