@@ -37,15 +37,10 @@ public class Main {
      * Переехать из текущего места в заданную точку
      * на любом, заранее определённом транспорте
      */
-    public static void moveTo(Person person, Position destination) {
-        // TODO
-        Transport transport = new Transport();
-        if (person.getPosition() != transport.getPosition()) person.walk(transport.getPosition());
-        transport.personInCar(person);
-        transport.setPosition(transport.getNearest(destination));
-        if (person.getPosition() != destination){
-            transport.exitFromCar(person);
-            person.walk(destination); }
+    public static void moveTo(Person person, Position destination, Transport transport) {
+        person.walk(transport.getPosition());
+        transport.goPosition(person,destination);
+        person.walk(destination);
         assert person.getPosition() == destination;
     }
 }

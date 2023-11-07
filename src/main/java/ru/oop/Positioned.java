@@ -13,11 +13,4 @@ public interface Positioned {
      * Текущее местоположение
      */
     Position getPosition();
-
-    /**
-     * Установить новое местоположение
-     * @param position необходимая позиция
-     * @return позицият после перемещения
-     */
-    Position setPosition(Position position);
 }

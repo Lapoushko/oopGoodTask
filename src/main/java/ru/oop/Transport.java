@@ -4,28 +4,12 @@ package ru.oop;
  * Класс всего транспорта
  */
 public class Transport implements Positioned {
-
     /**
-     * Посаадить человека в машину
-     */
-    public void personInCar(Person person){
-        // TODO
-    }
-
-    /**
-     * Человек выходит из машины
-     */
-
-    public void exitFromCar(Person person){
-        // TODO
-    }
-
-    /**
-     * Узнать ближайшую точку к цели
-     * @param destination ближайшая точка
+     * Перемещение до конечной точки
+     * @param destination конечная точка
      * @return позиция
      */
-    public Position getNearest(Position destination){
+    public Position goPosition(Person person, Position destination){
         // TODO
         return null;
     }
@@ -36,16 +20,6 @@ public class Transport implements Positioned {
      */
     @Override
     public Position getPosition() {
-        // TODO
-        return null;
-    }
-
-    /**
-     * Отправиться к конечной точке
-     * @param destination конечная точка
-     */
-    @Override
-    public Position setPosition(Position destination) {
         // TODO
         return null;
     }
