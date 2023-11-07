@@ -22,11 +22,8 @@ public class Main {
     public static void moveTo(Person person, Position destination) {
         // TODO
         Car car = new Car();
-        Position carPosition = car.getCarPosition();
-        person.walk(carPosition);
-        car.personInCar(person);
-        carPosition = car.goPosition(destination);
-        if (carPosition == destination) car.exitFromCar(person);
+        car.goPosition(person, destination);
+        person.walk(destination);
         assert person.getPosition() == destination;
 
     }

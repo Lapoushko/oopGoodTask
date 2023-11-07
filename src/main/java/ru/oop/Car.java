@@ -16,23 +16,8 @@ public class Car {
     /**
      * Переместить машину к конечной точке
      */
-    Position goPosition(Position endPosition){
+    Position goPosition(Person person, Position endPosition){
         // TODO
         return null;
     }
-
-    /**
-     * Человек садится в машину
-     */
-    void personInCar(Person person){
-        // TODO
-    }
-
-    /**
-     * Человек выходит из машины
-     */
-    void exitFromCar(Person person){
-        // TODO
-    }
-
 }
